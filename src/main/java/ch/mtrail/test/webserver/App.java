@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import ch.mtrail.test.webserver.handler.CurrentTimeHandler;
 import ch.mtrail.test.webserver.handler.Handler;
 import ch.mtrail.test.webserver.handler.HelloWorldHandler;
 import fi.iki.elonen.NanoHTTPD;
@@ -23,6 +24,7 @@ public class App extends NanoHTTPD {
 		try {
 			final App app = new App();
 			app.registerHandler("/hello-world", new HelloWorldHandler());
+			app.registerHandler("/time", new CurrentTimeHandler());
 		} catch (final IOException ioe) {
 			System.err.println("Couldn't start server:\n" + ioe);
 		}
