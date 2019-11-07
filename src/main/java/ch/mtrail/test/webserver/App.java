@@ -14,9 +14,9 @@ public class App extends NanoHTTPD {
 	final Map<String, Handler> handlers = new HashMap<>();
 
 	public App() throws IOException {
-		super(8080);
+		super(8086);
 		start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
-		System.out.println("\nRunning! Point your browsers to http://localhost:8080/ \n");
+		System.out.println("\nRunning! Point your browsers to http://localhost:8081/ \n");
 	}
 
 	public static void main(final String[] args) {
